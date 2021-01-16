@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+</head>
+<body>
+    <h1>Welcome to github-oauth</h1>
+
+    <h3>Complete your Registration</h3>
+
+    <form action="/oauth/github/register" method="post">
+        <div>
+            Name
+            <input type="text" name="name" value="{{.Name}}"/>
+        </div>
+        <div>
+            Email
+            <input type="text" name="email" value="{{.Email}}"/>
+        </div>
+        <div>
+            Company
+            <input type="text" name="company" value="{{.Company}}"/>
+        </div>
+        <div>
+            <input type="submit" value="CONFIRM"/>
+        </div>
+
+        <input type="hidden" name="token" value="{{.Token}}">
+    </form>
+</body>
+</html>
